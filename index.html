@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atelje 138 — Kreativni studio | Vidikovac</title>
+<meta name="description" content="Atelje 138 — kreativni studio za radionice za decu i odrasle na Vidikovcu. Slikanje, šivenje, glina i keramika, slatke radionice, rođendani, slikanje uz vino, team building.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --turq:#3fb8b0; --turq-d:#2a8e88; --turq-l:#d9f2f0;
+  --pink:#f06ba8; --pink-d:#d44d8c; --pink-l:#fde0ee;
+  --purple:#9b6dc4; --purple-l:#ece0f6;
+  --gold:#c79a4b;
+  --ink:#3a3340; --cream:#fff8f3; --paper:#fffdfb;
+  --shadow:0 10px 30px rgba(155,109,196,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;overflow-x:hidden}
+h1,h2,h3,.fr{font-family:'Fraunces',serif}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+.eyebrow{display:inline-block;font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;color:var(--pink-d);background:var(--pink-l);padding:6px 14px;border-radius:30px;margin-bottom:14px}
+h2.title{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:600;line-height:1.12;margin-bottom:14px}
+.lead{font-size:1.06rem;max-width:640px;color:#6a626f}
+.center{text-align:center}.center .lead{margin:0 auto}
+
+header{position:sticky;top:0;z-index:50;background:rgba(255,248,243,.92);backdrop-filter:blur(10px);border-bottom:1px solid #f0e3da}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:11px;font-family:'Fraunces';font-weight:600;font-size:1.32rem}
+.logo{width:42px;height:42px;border-radius:50%;background:var(--turq);display:grid;place-items:center;color:#fff;font-weight:700;font-size:1rem;box-shadow:var(--shadow)}
+.brand small{display:block;font-family:'Nunito';font-weight:600;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--turq-d);margin-top:-2px}
+.menu{display:flex;gap:26px;align-items:center;font-weight:700;font-size:.95rem}
+.menu a:hover{color:var(--pink-d)}
+.right{display:flex;align-items:center;gap:16px}
+.langs{display:flex;gap:4px;background:#fff;border:1px solid #eedfe7;border-radius:30px;padding:4px}
+.langs button{border:none;background:none;cursor:pointer;font-family:'Nunito';font-weight:800;font-size:.78rem;padding:5px 10px;border-radius:30px;color:#9b8fa6}
+.langs button.active{background:var(--turq);color:#fff}
+.burger{display:none;border:none;background:none;cursor:pointer;font-size:1.6rem;color:var(--ink)}
+@media(max-width:880px){
+  .menu{display:none;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:var(--cream);padding:18px 22px;border-bottom:1px solid #f0e3da;gap:14px}
+  .menu.open{display:flex}
+  .burger{display:block}
+}
+
+.hero{position:relative;padding:70px 0 90px;background:
+  radial-gradient(circle at 12% 20%,var(--turq-l),transparent 40%),
+  radial-gradient(circle at 88% 12%,var(--pink-l),transparent 42%),
+  radial-gradient(circle at 70% 90%,var(--purple-l),transparent 45%);}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,5.4vw,3.9rem);font-weight:600;line-height:1.06;margin-bottom:18px}
+.hero h1 em{font-style:italic;color:var(--pink-d)}
+.hero p{font-size:1.12rem;color:#5f5767;max-width:520px;margin-bottom:26px}
+.btns{display:flex;gap:13px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:800;padding:14px 26px;border-radius:40px;cursor:pointer;border:2px solid transparent;font-size:.97rem;transition:.2s;font-family:'Nunito'}
+.btn-p{background:var(--pink);color:#fff;box-shadow:0 8px 20px rgba(240,107,168,.35)}
+.btn-p:hover{background:var(--pink-d);transform:translateY(-2px)}
+.btn-t{background:var(--turq);color:#fff;box-shadow:0 8px 20px rgba(63,184,176,.32)}
+.btn-t:hover{background:var(--turq-d);transform:translateY(-2px)}
+.btn-o{background:#fff;border-color:var(--purple);color:var(--purple)}
+.btn-o:hover{background:var(--purple);color:#fff}
+.hero-card{position:relative;aspect-ratio:4/5;border-radius:28px;background:
+  linear-gradient(135deg,#fff,var(--turq-l));border:1px solid #eadff7;box-shadow:var(--shadow);
+  display:grid;place-items:center;overflow:hidden}
+.palette{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:34px;width:100%}
+.swatch{aspect-ratio:1;border-radius:22px;box-shadow:0 6px 16px rgba(0,0,0,.08);display:grid;place-items:center;font-size:2.1rem}
+.tag-float{position:absolute;background:#fff;border-radius:16px;padding:10px 16px;font-weight:800;font-size:.82rem;box-shadow:var(--shadow);display:flex;align-items:center;gap:7px}
+.stats{display:flex;gap:30px;margin-top:30px;flex-wrap:wrap}
+.stat b{font-family:'Fraunces';font-size:1.7rem;color:var(--turq-d);display:block;line-height:1}
+.stat span{font-size:.82rem;color:#7c7385;font-weight:700}
+@media(max-width:880px){.hero-grid{grid-template-columns:1fr;gap:34px}.hero-card{max-width:380px;margin:0 auto}}
+
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-art{border-radius:26px;min-height:330px;background:
+  conic-gradient(from 30deg,var(--turq-l),var(--pink-l),var(--purple-l),var(--turq-l));
+  position:relative;box-shadow:var(--shadow);overflow:hidden;display:grid;place-items:center}
+.about-art span{font-size:5rem}
+.slogan{font-family:'Fraunces';font-style:italic;font-size:1.3rem;color:var(--purple);margin-top:18px}
+.feat{display:flex;gap:12px;margin-top:14px;align-items:flex-start}
+.feat .ic{flex:0 0 38px;height:38px;border-radius:11px;background:var(--turq-l);display:grid;place-items:center;font-size:1.1rem}
+.feat b{font-weight:800}
+@media(max-width:880px){.about-grid{grid-template-columns:1fr;gap:30px}}
+
+.toggle{display:inline-flex;background:#fff;border:1px solid #eedfe7;border-radius:40px;padding:5px;margin:8px auto 38px;box-shadow:var(--shadow)}
+.toggle button{border:none;background:none;cursor:pointer;font-family:'Nunito';font-weight:800;font-size:.98rem;padding:11px 28px;border-radius:40px;color:#9b8fa6;transition:.2s}
+.toggle button.active[data-aud="deca"]{background:var(--pink);color:#fff}
+.toggle button.active[data-aud="odrasli"]{background:var(--purple);color:#fff}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+#cardsOdrasli{grid-template-columns:repeat(2,1fr);max-width:760px;margin-left:auto;margin-right:auto}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.cards{grid-template-columns:1fr}}
+.card{background:var(--paper);border:1px solid #f1e6dd;border-radius:22px;padding:26px;box-shadow:0 6px 18px rgba(155,109,196,.07);transition:.22s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.card .emoji{width:54px;height:54px;border-radius:15px;display:grid;place-items:center;font-size:1.7rem;margin-bottom:16px}
+.c-pink{background:var(--pink-l)}.c-turq{background:var(--turq-l)}.c-purple{background:var(--purple-l)}
+.card h3{font-size:1.28rem;font-weight:600;margin-bottom:9px}
+.card p{font-size:.94rem;color:#6a626f;margin-bottom:16px;flex:1}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.chip{display:inline-flex;align-items:center;gap:5px;font-size:.78rem;font-weight:800;background:#fbf3ee;border:1px solid #f0e3da;color:#766c80;padding:6px 11px;border-radius:30px}
+.chip svg{width:14px;height:14px}
+.price{display:block;margin-top:14px;font-weight:800;color:var(--turq-d);font-size:.95rem}
+.price.list{color:var(--pink-d)}
+.bday-prices{margin-top:8px;font-size:.86rem;font-weight:700;color:#6a626f}
+.bday-prices span{display:block;padding:3px 0;border-top:1px dashed #ecdfd6}
+
+.voucher{background:linear-gradient(135deg,var(--pink-l),var(--purple-l))}
+.v-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+.v-card{background:#fffaf6;border-radius:24px;padding:30px;box-shadow:var(--shadow);border:2px dashed var(--pink)}
+.v-preview{border-radius:20px;background:linear-gradient(135deg,#fff,var(--pink-l));border:1px solid #f3d8e7;padding:28px;text-align:center;position:relative;overflow:hidden}
+.v-preview .ribbon{font-size:2.4rem}
+.v-preview h3{font-size:2rem;color:var(--gold);font-weight:700;letter-spacing:.04em}
+.v-preview .sub{color:var(--pink-d);font-family:'Fraunces';font-size:1.5rem;font-weight:600;margin-bottom:6px}
+.v-line{height:1px;background:repeating-linear-gradient(90deg,var(--pink) 0 8px,transparent 8px 16px);margin:16px 0}
+.v-to{font-weight:800;font-size:.95rem;min-height:1.2em}
+.v-msg{font-style:italic;color:#7c7385;min-height:1.2em;font-size:.9rem}
+form label{display:block;font-weight:800;font-size:.85rem;margin:14px 0 5px}
+input,select,textarea{width:100%;font-family:'Nunito';font-size:.95rem;padding:12px 14px;border:1.5px solid #ecdfe6;border-radius:13px;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--turq)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:880px){.v-grid{grid-template-columns:1fr;gap:30px}.row2{grid-template-columns:1fr}}
+
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gal .g{aspect-ratio:1;border-radius:18px;overflow:hidden;background:var(--turq-l);position:relative}
+.gal .g img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.gal .g:hover img{transform:scale(1.07)}
+.gal .ph{display:grid;place-items:center;font-size:2rem;color:var(--turq-d);background:linear-gradient(135deg,var(--turq-l),var(--pink-l))}
+@media(max-width:900px){.gal{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.gal{grid-template-columns:repeat(2,1fr)}}
+
+.contact{background:var(--turq-l)}
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px}
+.info-item{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
+.info-item .ic{flex:0 0 44px;height:44px;border-radius:13px;background:#fff;display:grid;place-items:center;font-size:1.25rem;box-shadow:0 5px 14px rgba(0,0,0,.06)}
+.info-item b{display:block;font-weight:800}
+.info-item a,.info-item span{color:#5f5767;font-weight:600}
+.hours{background:#fff;border-radius:18px;padding:20px 22px;margin-top:8px;box-shadow:0 6px 16px rgba(0,0,0,.05)}
+.hours b{color:var(--pink-d)}
+.form-card{background:#fff;border-radius:24px;padding:30px;box-shadow:var(--shadow)}
+.socials{display:flex;gap:12px;margin-top:18px}
+.socials a{width:46px;height:46px;border-radius:13px;background:#fff;display:grid;place-items:center;font-weight:800;color:var(--purple);box-shadow:0 5px 14px rgba(0,0,0,.06);font-size:1.1rem}
+.socials a:hover{background:var(--purple);color:#fff}
+@media(max-width:880px){.ct-grid{grid-template-columns:1fr;gap:30px}}
+
+footer{background:var(--ink);color:#e9e2ef;padding:40px 0 30px;text-align:center}
+footer .brand{justify-content:center;color:#fff;margin-bottom:10px}
+footer small{color:#a99fb5}
+.note{font-size:.82rem;color:#8a8094;background:#fff;border:1px dashed #e3d4de;border-radius:12px;padding:10px 14px;margin-top:12px}
+.hidden{display:none!important}
+.map{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:1px solid #d9eceb;margin-top:22px;height:230px}
+.map iframe{width:100%;height:100%;border:0}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap nav">
+  <a href="#hero" class="brand"><span class="logo">138</span><span>Atelje 138<small data-i18n="brandSub">Kreativni studio</small></span></a>
+  <nav class="menu" id="menu">
+    <a href="#about" data-i18n="navAbout">O ateljeu</a>
+    <a href="#workshops" data-i18n="navWorkshops">Radionice</a>
+    <a href="#voucher" data-i18n="navVoucher">Pokloni</a>
+    <a href="#gallery" data-i18n="navGallery">Galerija</a>
+    <a href="#contact" data-i18n="navContact">Kontakt</a>
+  </nav>
+  <div class="right">
+    <div class="langs" id="langs">
+      <button data-lang="sr" class="active">SR</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="ru">RU</button>
+    </div>
+    <button class="burger" id="burger" aria-label="Meni">☰</button>
+  </div>
+</div>
+</header>
+
+<section class="hero" id="hero" style="padding-top:60px">
+<div class="wrap hero-grid">
+  <div>
+    <span class="eyebrow" data-i18n="heroEye">Kreativne radionice za decu i odrasle</span>
+    <h1 data-i18n="heroTitle">Probudi <em>umetnost</em> u sebi</h1>
+    <p data-i18n="heroText">Topao prostor za stvaranje u srcu Vidikovca. Slikanje, šivenje, glina, slatke radionice i rođendani — bez potrebnog predznanja, sav materijal je obezbeđen.</p>
+    <div class="btns">
+      <a href="#workshops" class="btn btn-p" data-i18n="heroBtn1">Pogledaj radionice</a>
+      <a href="#voucher" class="btn btn-o" data-i18n="heroBtn2">Pokloni vaučer</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>4–18</b><span data-i18n="stat1">godina · deca</span></div>
+      <div class="stat"><b>18+</b><span data-i18n="stat2">radionice za odrasle</span></div>
+      <div class="stat"><b>120'</b><span data-i18n="stat3">trajanje radionice</span></div>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="palette">
+      <div class="swatch" style="background:var(--turq-l)">🎨</div>
+      <div class="swatch" style="background:var(--pink-l)">✂️</div>
+      <div class="swatch" style="background:var(--purple-l)">🧵</div>
+      <div class="swatch" style="background:var(--pink-l)">🧁</div>
+      <div class="swatch" style="background:var(--turq-l)">🏺</div>
+      <div class="swatch" style="background:var(--purple-l)">🎂</div>
+    </div>
+    <div class="tag-float" style="top:18px;left:18px">🖌️ <span data-i18n="float1">Ručni rad</span></div>
+    <div class="tag-float" style="bottom:18px;right:18px">💛 <span data-i18n="float2">Male grupe</span></div>
+  </div>
+</div>
+</section>
+
+<section id="about">
+<div class="wrap about-grid">
+  <div class="about-art"><span>🎨</span></div>
+  <div>
+    <span class="eyebrow" data-i18n="aboutEye">O ateljeu</span>
+    <h2 class="title" data-i18n="aboutTitle">Topao prostor za stvaranje</h2>
+    <p class="lead" data-i18n="aboutText">Atelje 138 je kreativni studio u kome se stvaraju mala umetnička dela. Bez potrebnog predznanja — tu smo da zajedno učimo korak po korak. Naše radionice vode iskusni instruktori, u malim grupama i opuštenoj atmosferi.</p>
+    <div class="feat"><div class="ic">🧰</div><div><b data-i18n="feat1b">Sav materijal je obezbeđen</b><div data-i18n="feat1t" style="font-size:.9rem;color:#6a626f">Ti doneseš samo dobru volju i osmeh.</div></div></div>
+    <div class="feat"><div class="ic">👩‍🏫</div><div><b data-i18n="feat2b">Iskusni instruktori</b><div data-i18n="feat2t" style="font-size:.9rem;color:#6a626f">Rad u malim grupama, korak po korak.</div></div></div>
+    <div class="feat"><div class="ic">🏡</div><div><b data-i18n="feat3b">U srcu Vidikovca</b><div data-i18n="feat3t" style="font-size:.9rem;color:#6a626f">Opuštena, prijatna atmosfera za sve uzraste.</div></div></div>
+    <p class="slogan">„probudi umetnost u sebi"</p>
+  </div>
+</div>
+</section>
+
+<section id="workshops" style="background:var(--paper)">
+<div class="wrap center">
+  <span class="eyebrow" data-i18n="wEye">Naše radionice</span>
+  <h2 class="title" data-i18n="wTitle">Izaberi svoju kreativnu avanturu</h2>
+  <p class="lead" data-i18n="wText">Sve radionice traju 120 minuta, materijal je uključen. Izaberi program za decu ili za odrasle.</p>
+  <div class="toggle" id="audToggle">
+    <button data-aud="deca" class="active" data-i18n="audKids">ZA DECU</button>
+    <button data-aud="odrasli" data-i18n="audAdults">ZA ODRASLE</button>
+  </div>
+</div>
+
+<div class="wrap cards" id="cardsDeca">
+  <div class="card"><div class="emoji c-pink">🎨</div>
+    <h3 data-i18n="k1t">Slikanje i crtanje</h3>
+    <p data-i18n="k1d">Boje, četkice i mašta bez granica. Deca uče osnove kroz igru i prave svoje umetničko delo — na platnu, biber crepu, rancu, cegeru, keramičkim šoljama/tanjirima i lampama.</p>
+    <div class="meta"><span class="chip clk">120 min</span><span class="chip" data-i18n="age418">4–18 god.</span></div>
+    <span class="price" data-i18n="onReq">Cena na upit</span></div>
+
+  <div class="card"><div class="emoji c-turq">🧵</div>
+    <h3 data-i18n="k2t">Radionice šivenja</h3>
+    <p data-i18n="k2d">Konac, pamuk i mašta — to je sve što treba, predznanje nije potrebno. Šijemo lutke, patke, plišane zeke, mede i čudovišta, pravimo dekorativne jastuke, mašne, gumice i rajfove.</p>
+    <div class="meta"><span class="chip clk">120 min</span><span class="chip" data-i18n="age418">4–18 god.</span></div>
+    <span class="price" data-i18n="onReq">Cena na upit</span></div>
+
+  <div class="card"><div class="emoji c-pink">🧁</div>
+    <h3 data-i18n="k3t">Slatke radionice</h3>
+    <p data-i18n="k3d">Otkrijte čaroliju slatkog stvaranja! Pravimo neodoljive torte, cake pops, lizalice i čokoladne poslastice — uz mnogo zabave i slatkih tajni iz profesionalne kuhinje. Idealno za početnike.</p>
+    <div class="meta"><span class="chip clk">120 min</span><span class="chip" data-i18n="age418">4–18 god.</span></div>
+    <span class="price" data-i18n="onReq">Cena na upit</span></div>
+
+  <div class="card"><div class="emoji c-purple">🏺</div>
+    <h3 data-i18n="k4t">Glina i keramika</h3>
+    <p data-i18n="k4d">Oblikovanje gline razvija finu motoriku i strpljenje. Svako dete odnosi kući svoj izrađeni predmet — društvene igre, vaze, tanjire, životinje, oslikavanje saksija uz sadnju cveća.</p>
+    <div class="meta"><span class="chip clk">120 min</span><span class="chip" data-i18n="age418">4–18 god.</span></div>
+    <span class="price" data-i18n="onReq">Cena na upit</span></div>
+
+  <div class="card"><div class="emoji c-pink">🎂</div>
+    <h3 data-i18n="k5t">Rođendani u atelju</h3>
+    <p data-i18n="k5d">Nezaboravan kreativni rođendan — tematska radionica, igra i druženje. Uključeno: 2 sata kreativnosti, digitalna pozivnica, dekoracija, fotografisanje, sokovi, personalizovana voda i pribor. Na vama su hrana, torta i svećice. Svoj rad deca nose kući.</p>
+    <div class="meta"><span class="chip clk">120 min</span></div>
+    <div class="bday-prices">
+      <span data-i18n="bd1">do 10 dece — 20.000 RSD</span>
+      <span data-i18n="bd2">11–20 dece — 36.000 RSD</span>
+      <span data-i18n="bd3">21–30 dece — 48.000 RSD</span>
+    </div></div>
+
+  <div class="card"><div class="emoji c-turq">🏫</div>
+    <h3 data-i18n="k6t">Radionice za vrtiće i škole</h3>
+    <p data-i18n="k6d">Grupne posete i prilagođeni programi za predškolske i školske grupe, uz dogovor termina, lokacije i trajanja.</p>
+    <div class="meta"><span class="chip" data-i18n="groupChip">Grupno</span></div>
+    <span class="price" data-i18n="onReq">Cena na upit</span></div>
+</div>
+
+<div class="wrap cards hidden" id="cardsOdrasli">
+  <div class="card"><div class="emoji c-purple">🍷</div>
+    <h3 data-i18n="a1t">Slikanje uz vino</h3>
+    <p data-i18n="a1d">Opuštena večernja radionica uz čašu vina — slikamo na platnu, biber crepu, rancu, cegeru, keramičkim šoljama/tanjirima i lampama.</p>
+    <div class="meta"><span class="chip clk">120 min</span><span class="chip" data-i18n="age18">18+ god.</span></div>
+    <span class="price list" data-i18n="onReq">Cena na upit</span></div>
+
+  <div class="card"><div class="emoji c-turq">🏺</div>
+    <h3 data-i18n="a2t">Glina i keramika uz koktele</h3>
+    <p data-i18n="a2d">Radionica gline i keramike uz neograničene koktele — izrada vaza, tanjira i raznih predmeta, oslikavanje saksija uz sadnju cveća.</p>
+    <div class="meta"><span class="chip clk">120 min</span><span class="chip" data-i18n="age18">18+ god.</span></div>
+    <span class="price list" data-i18n="onReq">Cena na upit</span></div>
+
+  <div class="card"><div class="emoji c-pink">🤝</div>
+    <h3 data-i18n="a3t">Team building</h3>
+    <p data-i18n="a3d">Kreativne radionice za firme i timove — zajedničko stvaranje koje povezuje i opušta kolektiv.</p>
+    <div class="meta"><span class="chip" data-i18n="byAgree">Grupe po dogovoru</span></div>
+    <span class="price list" data-i18n="onReq">Cena na upit</span></div>
+
+  <div class="card"><div class="emoji c-purple">🎉</div>
+    <h3 data-i18n="a4t">Devojačko & proslave</h3>
+    <p data-i18n="a4d">Privatne grupe za devojačko veče, proslave i posebne prilike — uz prilagođen kreativni program.</p>
+    <div class="meta"><span class="chip" data-i18n="priv">Privatno, po dogovoru</span></div>
+    <span class="price list" data-i18n="onReq">Cena na upit</span></div>
+</div>
+
+<div class="wrap center" style="margin-top:40px">
+  <a href="#contact" class="btn btn-t" data-i18n="wCta">Prijavi se za radionicu</a>
+</div>
+</section>
+
+<section id="voucher" class="voucher">
+<div class="wrap v-grid">
+  <div>
+    <span class="eyebrow" data-i18n="vEye">Poklon vaučer</span>
+    <h2 class="title" data-i18n="vTitle">Pokloni kreativnost</h2>
+    <p class="lead" data-i18n="vText">Iznenadi nekoga personalizovanim poklon vaučerom za radionicu po želji. Vi birate datum za uživanje. Popuni formu — javljamo se sa potvrdom i načinom plaćanja.</p>
+    <div class="v-preview" style="margin-top:24px">
+      <div class="ribbon">🎀</div>
+      <h3>POKLON VAUČER</h3>
+      <div class="sub" data-i18n="vForWorkshop">za radionicu po želji</div>
+      <div class="v-line"></div>
+      <div class="v-to" id="vpTo">Za: ______</div>
+      <div class="v-msg" id="vpMsg">Vaša poruka...</div>
+      <div class="v-line"></div>
+      <div style="font-weight:800;color:var(--pink-d)" id="vpAmt">ATELJE 138</div>
+    </div>
+  </div>
+
+  <div class="v-card">
+    <form action="https://formsubmit.co/atelje138@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Novi POKLON VAUČER — Atelje 138">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="Tip" value="Poklon vaucer">
+      <label data-i18n="vfWorkshop">Radionica</label>
+      <select name="Radionica" id="vSel">
+        <option data-i18n="vfChoose">Po želji / nisam siguran/na</option>
+        <option>Slikanje i crtanje</option>
+        <option>Šivenje</option>
+        <option>Slatke radionice</option>
+        <option>Glina i keramika</option>
+        <option>Slikanje uz vino (18+)</option>
+        <option>Glina uz koktele (18+)</option>
+      </select>
+      <div class="row2">
+        <div><label data-i18n="vfAmount">Vrednost (RSD)</label>
+          <input name="Vrednost" id="vAmt" type="text" placeholder="npr. 3000" inputmode="numeric"></div>
+        <div><label data-i18n="vfFor">Ime osobe (Za:)</label>
+          <input name="Za" id="vTo" type="text" placeholder="npr. Maja"></div>
+      </div>
+      <label data-i18n="vfMsg">Personalizovana poruka</label>
+      <input name="Poruka" id="vMsg" type="text" placeholder="Srećan rođendan! 🎨">
+      <div class="row2">
+        <div><label data-i18n="vfName">Vaše ime</label><input name="Naručilac" type="text" required></div>
+        <div><label data-i18n="vfPhone">Telefon</label><input name="Telefon" type="tel" required></div>
+      </div>
+      <label data-i18n="vfEmail">Vaš e-mail</label>
+      <input name="email" type="email" required>
+      <button class="btn btn-p" type="submit" style="width:100%;margin-top:18px;justify-content:center" data-i18n="vfSubmit">Pošalji zahtev za vaučer</button>
+      <div class="note" data-i18n="vNote">Plaćanje se dogovara nakon prijave (gotovina ili uplata na račun). Vaučer šaljemo personalizovan, u digitalnom ili štampanom obliku.</div>
+    </form>
+  </div>
+</div>
+</section>
+
+<section id="gallery" style="background:var(--paper)">
+<div class="wrap center" style="margin-bottom:34px">
+  <span class="eyebrow" data-i18n="gEye">Galerija</span>
+  <h2 class="title" data-i18n="gTitle">Iz našeg ateljea</h2>
+  <p class="lead" data-i18n="gText">Trenuci stvaranja, osmesi i mala umetnička dela naših polaznika.</p>
+</div>
+<div class="wrap gal" id="gal"></div>
+</section>
+
+<section id="contact" class="contact">
+<div class="wrap ct-grid">
+  <div>
+    <span class="eyebrow" data-i18n="cEye">Kontakt</span>
+    <h2 class="title" data-i18n="cTitle">Prijavi se ili nas pitaj</h2>
+    <p class="lead" style="margin-bottom:24px" data-i18n="cText">Prijave su obavezne — telefonom ili preko društvenih mreža. Radujemo se tvojoj poseti!</p>
+    <div class="info-item"><div class="ic">📍</div><div><b data-i18n="cAddr">Adresa</b><span>Pilota Mihajla Petrovića 75, Vidikovac</span></div></div>
+    <div class="info-item"><div class="ic">📞</div><div><b data-i18n="cPhone">Telefon</b><a href="tel:+38162670856">+381 62 670856</a></div></div>
+    <div class="info-item"><div class="ic">✉️</div><div><b>E-mail</b><a href="mailto:atelje138@gmail.com">atelje138@gmail.com</a></div></div>
+    <div class="hours">
+      <b data-i18n="cHoursTitle">Radno vreme radionica</b>
+      <div data-i18n="cHours1">🎨 Utorkom — dečije radionice 18:30–20:30h</div>
+      <div data-i18n="cHours2">✨ Nedeljom — radionice od 17h</div>
+      <div style="margin-top:6px;font-size:.86rem;color:#7c7385" data-i18n="cHoursNote">Prijave su obavezne na broj telefona ili društvene mreže.</div>
+    </div>
+    <div class="socials">
+      <a href="https://www.instagram.com/atelje138" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+      <a href="https://www.facebook.com/share/1GendjShNT/" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+      <a href="https://maps.app.goo.gl/aT1UBeGUttmZVoJb8" target="_blank" rel="noopener" aria-label="Google Maps">📍</a>
+    </div>
+    <div class="map">
+      <iframe loading="lazy" title="Atelje 138 mapa" src="https://www.google.com/maps?q=Pilota%20Mihajla%20Petrovi%C4%87a%2075%20Beograd&output=embed"></iframe>
+    </div>
+  </div>
+
+  <div class="form-card">
+    <h3 style="font-weight:600;font-size:1.4rem;margin-bottom:4px" data-i18n="cFormTitle">Prijava za radionicu</h3>
+    <p style="font-size:.9rem;color:#6a626f;margin-bottom:6px" data-i18n="cFormText">Popuni formu i javljamo ti se sa slobodnim terminom.</p>
+    <form action="https://formsubmit.co/atelje138@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nova PRIJAVA za radionicu — Atelje 138">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <div class="row2">
+        <div><label data-i18n="ffName">Ime i prezime</label><input name="Ime" type="text" required></div>
+        <div><label data-i18n="ffPhone">Telefon</label><input name="Telefon" type="tel" required></div>
+      </div>
+      <label data-i18n="ffEmail">E-mail</label>
+      <input name="email" type="email" required>
+      <label data-i18n="ffWorkshop">Radionica</label>
+      <select name="Radionica">
+        <option>Slikanje i crtanje</option>
+        <option>Šivenje</option>
+        <option>Slatke radionice</option>
+        <option>Glina i keramika</option>
+        <option data-i18n="ffBday">Rođendan u atelju</option>
+        <option data-i18n="ffSchool">Vrtići i škole</option>
+        <option>Slikanje uz vino (18+)</option>
+        <option>Glina uz koktele (18+)</option>
+        <option data-i18n="ffTeam">Team building</option>
+        <option data-i18n="ffParty">Devojačko / proslava</option>
+      </select>
+      <label data-i18n="ffMsg">Poruka (uzrast, željeni termin, broj osoba...)</label>
+      <textarea name="Poruka" rows="3"></textarea>
+      <button class="btn btn-t" type="submit" style="width:100%;margin-top:18px;justify-content:center" data-i18n="ffSubmit">Pošalji prijavu</button>
+    </form>
+  </div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+  <a href="#hero" class="brand"><span class="logo">138</span><span>Atelje 138</span></a>
+  <p data-i18n="footSlogan" style="font-family:'Fraunces';font-style:italic;color:#cdbfe0">„probudi umetnost u sebi"</p>
+  <p style="margin:8px 0;font-size:.9rem">Pilota Mihajla Petrovića 75, Vidikovac · +381 62 670856 · atelje138@gmail.com</p>
+  <small>© <span id="yr"></span> Atelje 138 · <span data-i18n="footRights">Sva prava zadržana</span></small>
+</div>
+</footer>
+
+<script>
+const galWrap=document.getElementById('gal');
+const galEmojis=['🎨','🧵','🏺','🧁','🎂','🪡','🖌️','💐','🧸','🦢','🪻','🎈'];
+for(let i=1;i<=20;i++){
+  (function(i){
+    const ph=document.createElement('div');ph.className='g ph';ph.textContent=galEmojis[(i-1)%galEmojis.length];
+    galWrap.appendChild(ph);
+    const img=new Image();
+    img.onload=function(){
+      const a=document.createElement('a');a.className='g';a.href='images/g'+i+'.jpg';a.target='_blank';
+      img.alt='Atelje 138 — foto '+i;a.appendChild(img);
+      if(ph.parentNode)galWrap.replaceChild(a,ph);
+    };
+    img.src='images/g'+i+'.jpg';
+  })(i);
+}
+
+document.getElementById('yr').textContent=new Date().getFullYear();
+document.getElementById('burger').onclick=function(){document.getElementById('menu').classList.toggle('open');};
+document.querySelectorAll('#menu a').forEach(function(a){a.onclick=function(){document.getElementById('menu').classList.remove('open');};});
+
+document.querySelectorAll('#audToggle button').forEach(function(b){
+  b.onclick=function(){
+    document.querySelectorAll('#audToggle button').forEach(function(x){x.classList.remove('active');});
+    b.classList.add('active');
+    var kids=b.dataset.aud==='deca';
+    document.getElementById('cardsDeca').classList.toggle('hidden',!kids);
+    document.getElementById('cardsOdrasli').classList.toggle('hidden',kids);
+  };
+});
+
+const vTo=document.getElementById('vTo'),vMsg=document.getElementById('vMsg'),vAmt=document.getElementById('vAmt');
+function updV(){
+  document.getElementById('vpTo').textContent=vTo.value?('Za: '+vTo.value):(T[lang].vpTo||'Za: ______');
+  document.getElementById('vpMsg').textContent=vMsg.value||(T[lang].vpMsg||'Vaša poruka...');
+  document.getElementById('vpAmt').textContent=vAmt.value?(vAmt.value+' RSD'):'ATELJE 138';
+}
+[vTo,vMsg,vAmt].forEach(function(e){e.addEventListener('input',updV);});
+
+const clockSVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
+function paintClocks(){document.querySelectorAll('.chip.clk').forEach(function(c){c.innerHTML=clockSVG+'<span>120 min</span>';});}
+paintClocks();
+
+const T={
+ sr:{vpTo:'Za: ______',vpMsg:'Vaša poruka...'},
+ en:{
+  brandSub:"Creative studio",navAbout:"About",navWorkshops:"Workshops",navVoucher:"Gifts",navGallery:"Gallery",navContact:"Contact",
+  heroEye:"Creative workshops for kids and adults",heroTitle:'Awaken the <em>artist</em> within',heroText:"A warm space to create in the heart of Vidikovac. Painting, sewing, clay, sweet workshops and birthdays — no experience needed, all materials provided.",
+  heroBtn1:"See workshops",heroBtn2:"Gift a voucher",stat1:"years · kids",stat2:"adult workshops",stat3:"workshop length",float1:"Handmade",float2:"Small groups",
+  aboutEye:"About the studio",aboutTitle:"A warm space to create",aboutText:"Atelje 138 is a creative studio where little works of art come to life. No prior knowledge needed — we learn together, step by step. Our workshops are led by experienced instructors, in small groups and a relaxed atmosphere.",
+  feat1b:"All materials provided",feat1t:"Just bring your good mood and a smile.",feat2b:"Experienced instructors",feat2t:"Small groups, step by step.",feat3b:"In the heart of Vidikovac",feat3t:"A relaxed, friendly atmosphere for all ages.",
+  wEye:"Our workshops",wTitle:"Choose your creative adventure",wText:"All workshops last 120 minutes, materials included. Pick a program for kids or adults.",audKids:"FOR KIDS",audAdults:"FOR ADULTS",
+  k1t:"Painting & drawing",k1d:"Colors, brushes and boundless imagination. Kids learn the basics through play and make their own artwork — on canvas, roof tile, backpack, tote bag, ceramic mugs/plates and lamps.",
+  k2t:"Sewing workshops",k2d:"Thread, cotton and imagination — that's all you need, no experience required. We sew dolls, ducks, plush bunnies, bears and monsters, make decorative pillows, bows, hair ties and headbands.",
+  k3t:"Sweet workshops",k3d:"Discover the magic of sweet creation! We make irresistible cakes, cake pops, lollipops and chocolate treats — with lots of fun and sweet secrets from a professional kitchen. Ideal for beginners.",
+  k4t:"Clay & ceramics",k4d:"Shaping clay develops fine motor skills and patience. Each child takes home their own piece — board games, vases, plates, animals, plus painting flower pots and planting flowers.",
+  k5t:"Birthdays at the studio",k5d:"An unforgettable creative birthday — themed workshop, play and fun. Included: 2 hours of creativity, digital invitation, decoration, photos, juices, personalized water and supplies. Food, cake and candles are up to you. Kids take their work home.",
+  k6t:"Kindergartens & schools",k6d:"Group visits and tailored programs for preschool and school groups, by arrangement of time, location and duration.",
+  a1t:"Painting with wine",a1d:"A relaxed evening workshop with a glass of wine — we paint on canvas, roof tile, backpack, tote bag, ceramic mugs/plates and lamps.",
+  a2t:"Clay & ceramics with cocktails",a2d:"A clay and ceramics workshop with unlimited cocktails — making vases, plates and various objects, painting flower pots plus planting flowers.",
+  a3t:"Team building",a3d:"Creative workshops for companies and teams — creating together that connects and relaxes the group.",
+  a4t:"Hen parties & celebrations",a4d:"Private groups for hen nights, celebrations and special occasions — with a tailored creative program.",
+  onReq:"Price on request",age418:"ages 4–18",age18:"ages 18+",groupChip:"Group",byAgree:"Groups by arrangement",priv:"Private, by arrangement",
+  bd1:"up to 10 kids — 20,000 RSD",bd2:"11–20 kids — 36,000 RSD",bd3:"21–30 kids — 48,000 RSD",wCta:"Sign up for a workshop",
+  vEye:"Gift voucher",vTitle:"Gift creativity",vText:"Surprise someone with a personalized gift voucher for a workshop of their choice. They pick the date. Fill in the form — we'll reply with confirmation and payment details.",
+  vForWorkshop:"for a workshop of your choice",vpTo:"For: ______",vpMsg:"Your message...",
+  vfWorkshop:"Workshop",vfChoose:"Their choice / not sure",vfAmount:"Value (RSD)",vfFor:"Recipient (For:)",vfMsg:"Personalized message",vfName:"Your name",vfPhone:"Phone",vfEmail:"Your e-mail",vfSubmit:"Send voucher request",
+  vNote:"Payment is arranged after the request (cash or bank transfer). The voucher is sent personalized, digital or printed.",
+  gEye:"Gallery",gTitle:"From our studio",gText:"Moments of creation, smiles and little works of art by our participants.",
+  cEye:"Contact",cTitle:"Sign up or ask us",cText:"Registration is required — by phone or social media. We look forward to your visit!",
+  cAddr:"Address",cPhone:"Phone",cHoursTitle:"Workshop hours",cHours1:"🎨 Tuesdays — kids' workshops 18:30–20:30",cHours2:"✨ Sundays — workshops from 17:00",cHoursNote:"Registration is required by phone or social media.",
+  cFormTitle:"Workshop registration",cFormText:"Fill in the form and we'll get back to you with an available slot.",
+  ffName:"Full name",ffPhone:"Phone",ffEmail:"E-mail",ffWorkshop:"Workshop",ffBday:"Birthday at the studio",ffSchool:"Kindergartens & schools",ffTeam:"Team building",ffParty:"Hen party / celebration",ffMsg:"Message (age, preferred date, number of people...)",ffSubmit:"Send registration",
+  footSlogan:'"awaken the artist within"',footRights:"All rights reserved"
+ },
+ ru:{
+  brandSub:"Творческая студия",navAbout:"О студии",navWorkshops:"Мастер-классы",navVoucher:"Подарки",navGallery:"Галерея",navContact:"Контакт",
+  heroEye:"Творческие мастер-классы для детей и взрослых",heroTitle:'Пробуди <em>художника</em> в себе',heroText:"Уютное пространство для творчества в сердце Видиковца. Рисование, шитьё, глина, сладкие мастер-классы и дни рождения — без подготовки, все материалы включены.",
+  heroBtn1:"Смотреть мастер-классы",heroBtn2:"Подарить сертификат",stat1:"лет · дети",stat2:"для взрослых",stat3:"длительность",float1:"Ручная работа",float2:"Малые группы",
+  aboutEye:"О студии",aboutTitle:"Уютное место для творчества",aboutText:"Atelje 138 — творческая студия, где рождаются маленькие произведения искусства. Подготовка не нужна — учимся вместе, шаг за шагом. Занятия ведут опытные инструкторы, в малых группах и расслабленной атмосфере.",
+  feat1b:"Все материалы включены",feat1t:"Принесите только хорошее настроение и улыбку.",feat2b:"Опытные инструкторы",feat2t:"Малые группы, шаг за шагом.",feat3b:"В сердце Видиковца",feat3t:"Расслабленная, приятная атмосфера для всех возрастов.",
+  wEye:"Наши мастер-классы",wTitle:"Выбери своё творческое приключение",wText:"Все мастер-классы длятся 120 минут, материалы включены. Выберите программу для детей или взрослых.",audKids:"ДЛЯ ДЕТЕЙ",audAdults:"ДЛЯ ВЗРОСЛЫХ",
+  k1t:"Рисование и живопись",k1d:"Краски, кисти и безграничная фантазия. Дети осваивают основы через игру и создают своё произведение — на холсте, черепице, рюкзаке, сумке, керамических чашках/тарелках и лампах.",
+  k2t:"Мастер-классы по шитью",k2d:"Нитки, хлопок и фантазия — это всё, что нужно, опыт не требуется. Шьём кукол, уточек, плюшевых зайцев, мишек и монстров, делаем декоративные подушки, банты, резинки и ободки.",
+  k3t:"Сладкие мастер-классы",k3d:"Откройте магию сладкого творчества! Делаем неотразимые торты, кейк-попсы, леденцы и шоколадные лакомства — с весельем и сладкими секретами профессиональной кухни. Идеально для начинающих.",
+  k4t:"Глина и керамика",k4d:"Лепка из глины развивает мелкую моторику и терпение. Каждый ребёнок забирает домой своё изделие — настольные игры, вазы, тарелки, животных, роспись горшков и посадку цветов.",
+  k5t:"Дни рождения в студии",k5d:"Незабываемый творческий день рождения — тематический мастер-класс, игры и общение. Включено: 2 часа творчества, цифровое приглашение, декор, фото, соки, именная вода и материалы. Еда, торт и свечи — за вами. Свои работы дети забирают домой.",
+  k6t:"Детские сады и школы",k6d:"Групповые визиты и программы для дошкольных и школьных групп по договорённости о времени, месте и длительности.",
+  a1t:"Рисование под вино",a1d:"Расслабленный вечерний мастер-класс с бокалом вина — рисуем на холсте, черепице, рюкзаке, сумке, керамических чашках/тарелках и лампах.",
+  a2t:"Глина и керамика под коктейли",a2d:"Мастер-класс по глине и керамике с неограниченными коктейлями — создание ваз, тарелок и предметов, роспись горшков и посадка цветов.",
+  a3t:"Тимбилдинг",a3d:"Творческие мастер-классы для компаний и команд — совместное творчество, которое объединяет и расслабляет коллектив.",
+  a4t:"Девичник и праздники",a4d:"Частные группы для девичников, праздников и особых случаев — с индивидуальной творческой программой.",
+  onReq:"Цена по запросу",age418:"4–18 лет",age18:"18+ лет",groupChip:"Группа",byAgree:"Группы по договорённости",priv:"Приватно, по договорённости",
+  bd1:"до 10 детей — 20 000 RSD",bd2:"11–20 детей — 36 000 RSD",bd3:"21–30 детей — 48 000 RSD",wCta:"Записаться на мастер-класс",
+  vEye:"Подарочный сертификат",vTitle:"Подари творчество",vText:"Удивите кого-то именным подарочным сертификатом на мастер-класс по выбору. Дату выбирают сами. Заполните форму — мы ответим с подтверждением и реквизитами.",
+  vForWorkshop:"на мастер-класс по выбору",vpTo:"Кому: ______",vpMsg:"Ваше сообщение...",
+  vfWorkshop:"Мастер-класс",vfChoose:"По выбору / не уверен(а)",vfAmount:"Сумма (RSD)",vfFor:"Кому (имя)",vfMsg:"Личное сообщение",vfName:"Ваше имя",vfPhone:"Телефон",vfEmail:"Ваш e-mail",vfSubmit:"Отправить запрос на сертификат",
+  vNote:"Оплата согласовывается после запроса (наличные или перевод). Сертификат отправляем именным, в цифровом или печатном виде.",
+  gEye:"Галерея",gTitle:"Из нашей студии",gText:"Моменты творчества, улыбки и маленькие произведения наших участников.",
+  cEye:"Контакт",cTitle:"Запишись или спроси нас",cText:"Запись обязательна — по телефону или через соцсети. Будем рады вашему визиту!",
+  cAddr:"Адрес",cPhone:"Телефон",cHoursTitle:"Часы мастер-классов",cHours1:"🎨 Вторник — детские мастер-классы 18:30–20:30",cHours2:"✨ Воскресенье — мастер-классы с 17:00",cHoursNote:"Запись обязательна по телефону или через соцсети.",
+  cFormTitle:"Запись на мастер-класс",cFormText:"Заполните форму, и мы предложим свободное время.",
+  ffName:"Имя и фамилия",ffPhone:"Телефон",ffEmail:"E-mail",ffWorkshop:"Мастер-класс",ffBday:"День рождения в студии",ffSchool:"Детские сады и школы",ffTeam:"Тимбилдинг",ffParty:"Девичник / праздник",ffMsg:"Сообщение (возраст, желаемая дата, число участников...)",ffSubmit:"Отправить заявку",
+  footSlogan:'"пробуди художника в себе"',footRights:"Все права защищены"
+ }
+};
+let lang='sr';
+document.querySelectorAll('[data-i18n]').forEach(function(el){if(T.sr[el.dataset.i18n]===undefined)T.sr[el.dataset.i18n]=el.innerHTML;});
+function setLang(l){
+  lang=l;document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    var v=T[l][el.dataset.i18n];if(v!==undefined)el.innerHTML=v;
+  });
+  paintClocks();
+  document.querySelectorAll('#langs button').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
+  updV();
+}
+document.querySelectorAll('#langs button').forEach(function(b){b.onclick=function(){setLang(b.dataset.lang);};});
+updV();
+</script>
+</body>
+</html>
