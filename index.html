@@ -390,7 +390,28 @@ footer small{color:#a99fb5}
   <h2 class="title" data-i18n="gTitle">Iz našeg ateljea</h2>
   <p class="lead" data-i18n="gText">Trenuci stvaranja, osmesi i mala umetnička dela naših polaznika.</p>
 </div>
-<div class="wrap gal" id="gal"></div>
+<div class="wrap gal" id="gal">
+  <a class="g" href="images/g1.jpg" target="_blank"><img src="images/g1.jpg" alt="Atelje 138 — radionica 1" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+  <a class="g" href="images/g2.jpg" target="_blank"><img src="images/g2.jpg" alt="Atelje 138 — radionica 2" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+  <a class="g" href="images/g3.jpg" target="_blank"><img src="images/g3.jpg" alt="Atelje 138 — radionica 3" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+  <a class="g" href="images/g4.jpg" target="_blank"><img src="images/g4.jpg" alt="Atelje 138 — radionica 4" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+  <a class="g" href="images/g5.jpg" target="_blank"><img src="images/g5.jpg" alt="Atelje 138 — radionica 5" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+  <a class="g" href="images/g6.jpg" target="_blank"><img src="images/g6.jpg" alt="Atelje 138 — radionica 6" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+  <a class="g" href="images/g7.jpg" target="_blank"><img src="images/g7.jpg" alt="Atelje 138 — radionica 7" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+  <a class="g" href="images/g8.jpg" target="_blank"><img src="images/g8.jpg" alt="Atelje 138 — radionica 8" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+  <a class="g" href="images/g9.jpg" target="_blank"><img src="images/g9.jpg" alt="Atelje 138 — radionica 9" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+  <a class="g" href="images/g10.jpg" target="_blank"><img src="images/g10.jpg" alt="Atelje 138 — radionica 10" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+  <a class="g" href="images/g11.jpg" target="_blank"><img src="images/g11.jpg" alt="Atelje 138 — radionica 11" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+  <a class="g" href="images/g12.jpg" target="_blank"><img src="images/g12.jpg" alt="Atelje 138 — radionica 12" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+  <a class="g" href="images/g13.jpg" target="_blank"><img src="images/g13.jpg" alt="Atelje 138 — radionica 13" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+  <a class="g" href="images/g14.jpg" target="_blank"><img src="images/g14.jpg" alt="Atelje 138 — radionica 14" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+  <a class="g" href="images/g15.jpg" target="_blank"><img src="images/g15.jpg" alt="Atelje 138 — radionica 15" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+  <a class="g" href="images/g16.jpg" target="_blank"><img src="images/g16.jpg" alt="Atelje 138 — radionica 16" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+  <a class="g" href="images/g17.jpg" target="_blank"><img src="images/g17.jpg" alt="Atelje 138 — radionica 17" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+  <a class="g" href="images/g18.jpg" target="_blank"><img src="images/g18.jpg" alt="Atelje 138 — radionica 18" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+  <a class="g" href="images/g19.jpg" target="_blank"><img src="images/g19.jpg" alt="Atelje 138 — radionica 19" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+  <a class="g" href="images/g20.jpg" target="_blank"><img src="images/g20.jpg" alt="Atelje 138 — radionica 20" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+</div>
 </section>
 
 <section id="contact" class="contact">
@@ -462,22 +483,6 @@ footer small{color:#a99fb5}
 </footer>
 
 <script>
-const galWrap=document.getElementById('gal');
-const galEmojis=['🎨','🧵','🏺','🧁','🎂','🪡','🖌️','💐','🧸','🦢','🪻','🎈'];
-for(let i=1;i<=20;i++){
-  (function(i){
-    const ph=document.createElement('div');ph.className='g ph';ph.textContent=galEmojis[(i-1)%galEmojis.length];
-    galWrap.appendChild(ph);
-    const img=new Image();
-    img.onload=function(){
-      const a=document.createElement('a');a.className='g';a.href='images/g'+i+'.jpg';a.target='_blank';
-      img.alt='Atelje 138 — foto '+i;a.appendChild(img);
-      if(ph.parentNode)galWrap.replaceChild(a,ph);
-    };
-    img.src='images/g'+i+'.jpg';
-  })(i);
-}
-
 document.getElementById('yr').textContent=new Date().getFullYear();
 document.getElementById('burger').onclick=function(){document.getElementById('menu').classList.toggle('open');};
 document.querySelectorAll('#menu a').forEach(function(a){a.onclick=function(){document.getElementById('menu').classList.remove('open');};});
