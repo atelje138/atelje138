@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5RRRNV1DCD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5RRRNV1DCD');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Atelje 138 — Kreativni studio | Vidikovac</title>
-<meta name="description" content="Atelje 138 — kreativni studio za radionice za decu i odrasle na Vidikovcu. Slikanje, šivenje, glina i keramika, slatke radionice, rođendani, slikanje uz vino, team building.">
+<title>Atelje 138 — Kreativne radionice za decu i odrasle | Vidikovac, Beograd</title>
+<meta name="description" content="Kreativni studio na Vidikovcu (Rakovica), Beograd — blizu Čukarice. Radionice slikanja i crtanja, šivenja, gline i keramike, slatke radionice, kreativni rođendani, slikanje uz vino i team building. Sav materijal obezbeđen, male grupe.">
+<meta name="keywords" content="radionice za decu Beograd, kreativne radionice Vidikovac, radionice Rakovica, radionice Čukarica, rođendani za decu Beograd, slikanje uz vino, glina i keramika, Atelje 138">
+<link rel="canonical" href="https://atelje138.rs/">
+<link rel="icon" type="image/jpeg" href="logo-atelje138.jpg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Atelje 138 — Kreativne radionice za decu i odrasle">
+<meta property="og:description" content="Kreativni studio na Vidikovcu, Beograd. Slikanje, šivenje, glina i keramika, slatke radionice, rođendani, slikanje uz vino. Probudi umetnost u sebi!">
+<meta property="og:image" content="https://atelje138.rs/og-image.jpg">
+<meta property="og:url" content="https://atelje138.rs/">
+<meta property="og:locale" content="sr_RS">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Atelje 138 — Kreativne radionice za decu i odrasle">
+<meta name="twitter:description" content="Kreativni studio na Vidikovcu, Beograd. Probudi umetnost u sebi!">
+<meta name="twitter:image" content="https://atelje138.rs/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -378,7 +399,7 @@ footer small{color:#a99fb5}
     <span class="eyebrow" data-i18n="cEye">Kontakt</span>
     <h2 class="title" data-i18n="cTitle">Prijavi se ili nas pitaj</h2>
     <p class="lead" style="margin-bottom:24px" data-i18n="cText">Prijave su obavezne — telefonom ili preko društvenih mreža. Radujemo se tvojoj poseti!</p>
-    <div class="info-item"><div class="ic">📍</div><div><b data-i18n="cAddr">Adresa</b><span>Pilota Mihajla Petrovića 75, Vidikovac</span></div></div>
+    <div class="info-item"><div class="ic">📍</div><div><b data-i18n="cAddr">Adresa</b><span>Pilota Mihajla Petrovića 75, Vidikovac (Rakovica), Beograd</span></div></div>
     <div class="info-item"><div class="ic">📞</div><div><b data-i18n="cPhone">Telefon</b><a href="tel:+38162670856">+381 62 670856</a></div></div>
     <div class="info-item"><div class="ic">✉️</div><div><b>E-mail</b><a href="mailto:atelje138@gmail.com">atelje138@gmail.com</a></div></div>
     <div class="hours">
@@ -553,12 +574,4 @@ function setLang(l){
   document.querySelectorAll('[data-i18n]').forEach(function(el){
     var v=T[l][el.dataset.i18n];if(v!==undefined)el.innerHTML=v;
   });
-  paintClocks();
-  document.querySelectorAll('#langs button').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
-  updV();
-}
-document.querySelectorAll('#langs button').forEach(function(b){b.onclick=function(){setLang(b.dataset.lang);};});
-updV();
-</script>
-</body>
-</html>
+  paint
