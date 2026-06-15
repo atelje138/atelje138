@@ -146,10 +146,9 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--turq)}
 @media(max-width:880px){.v-grid{grid-template-columns:1fr;gap:30px}.row2{grid-template-columns:1fr}}
 
 .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.gal .g{aspect-ratio:1;border-radius:18px;overflow:hidden;background:var(--turq-l);position:relative}
+.gal .g{aspect-ratio:1;border-radius:18px;overflow:hidden;background:var(--turq-l);position:relative;display:block}
 .gal .g img{width:100%;height:100%;object-fit:cover;transition:.4s}
 .gal .g:hover img{transform:scale(1.07)}
-.gal .ph{display:grid;place-items:center;font-size:2rem;color:var(--turq-d);background:linear-gradient(135deg,var(--turq-l),var(--pink-l))}
 @media(max-width:900px){.gal{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:560px){.gal{grid-template-columns:repeat(2,1fr)}}
 
@@ -420,7 +419,7 @@ footer small{color:#a99fb5}
     <span class="eyebrow" data-i18n="cEye">Kontakt</span>
     <h2 class="title" data-i18n="cTitle">Prijavi se ili nas pitaj</h2>
     <p class="lead" style="margin-bottom:24px" data-i18n="cText">Prijave su obavezne — telefonom ili preko društvenih mreža. Radujemo se tvojoj poseti!</p>
-    <div class="info-item"><div class="ic">📍</div><div><b data-i18n="cAddr">Adresa</b><span>Pilota Mihajla Petrovića 75, Vidikovac (Rakovica), Beograd</span></div></div>
+    <div class="info-item"><div class="ic">📍</div><div><b data-i18n="cAddr">Adresa</b><span>Pilota Mihaila Petrovića 75, Vidikovac (Rakovica), Beograd</span></div></div>
     <div class="info-item"><div class="ic">📞</div><div><b data-i18n="cPhone">Telefon</b><a href="tel:+38162670856">+381 62 670856</a></div></div>
     <div class="info-item"><div class="ic">✉️</div><div><b>E-mail</b><a href="mailto:atelje138@gmail.com">atelje138@gmail.com</a></div></div>
     <div class="hours">
@@ -435,7 +434,7 @@ footer small{color:#a99fb5}
       <a href="https://maps.app.goo.gl/aT1UBeGUttmZVoJb8" target="_blank" rel="noopener" aria-label="Google Maps">📍</a>
     </div>
     <div class="map">
-      <iframe loading="lazy" title="Atelje 138 mapa" src="https://www.google.com/maps?q=Pilota%20Mihajla%20Petrovi%C4%87a%2075%20Beograd&output=embed"></iframe>
+      <iframe loading="lazy" title="Atelje 138 mapa" src="https://www.google.com/maps?q=Pilota%20Mihaila%20Petrovi%C4%87a%2075%20Beograd&output=embed"></iframe>
     </div>
   </div>
 
@@ -477,7 +476,7 @@ footer small{color:#a99fb5}
 <div class="wrap">
   <a href="#hero" class="brand"><span class="logo">138</span><span>Atelje 138</span></a>
   <p data-i18n="footSlogan" style="font-family:'Fraunces';font-style:italic;color:#cdbfe0">„probudi umetnost u sebi"</p>
-  <p style="margin:8px 0;font-size:.9rem">Pilota Mihajla Petrovića 75, Vidikovac · +381 62 670856 · atelje138@gmail.com</p>
+  <p style="margin:8px 0;font-size:.9rem">Pilota Mihaila Petrovića 75, Vidikovac · +381 62 670856 · atelje138@gmail.com</p>
   <small>© <span id="yr"></span> Atelje 138 · <span data-i18n="footRights">Sva prava zadržana</span></small>
 </div>
 </footer>
@@ -497,7 +496,7 @@ document.querySelectorAll('#audToggle button').forEach(function(b){
   };
 });
 
-const vTo=document.getElementById('vTo'),vMsg=document.getElementById('vMsg'),vAmt=document.getElementById('vAmt');
+var vTo=document.getElementById('vTo'),vMsg=document.getElementById('vMsg'),vAmt=document.getElementById('vAmt');
 function updV(){
   document.getElementById('vpTo').textContent=vTo.value?('Za: '+vTo.value):(T[lang].vpTo||'Za: ______');
   document.getElementById('vpMsg').textContent=vMsg.value||(T[lang].vpMsg||'Vaša poruka...');
@@ -505,11 +504,11 @@ function updV(){
 }
 [vTo,vMsg,vAmt].forEach(function(e){e.addEventListener('input',updV);});
 
-const clockSVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
+var clockSVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
 function paintClocks(){document.querySelectorAll('.chip.clk').forEach(function(c){c.innerHTML=clockSVG+'<span>120 min</span>';});}
 paintClocks();
 
-const T={
+var T={
  sr:{vpTo:'Za: ______',vpMsg:'Vaša poruka...'},
  en:{
   brandSub:"Creative studio",navAbout:"About",navWorkshops:"Workshops",navVoucher:"Gifts",navGallery:"Gallery",navContact:"Contact",
@@ -572,11 +571,19 @@ const T={
   footSlogan:'"пробуди художника в себе"',footRights:"Все права защищены"
  }
 };
-let lang='sr';
+var lang='sr';
 document.querySelectorAll('[data-i18n]').forEach(function(el){if(T.sr[el.dataset.i18n]===undefined)T.sr[el.dataset.i18n]=el.innerHTML;});
 function setLang(l){
   lang=l;document.documentElement.lang=l;
   document.querySelectorAll('[data-i18n]').forEach(function(el){
     var v=T[l][el.dataset.i18n];if(v!==undefined)el.innerHTML=v;
   });
-  paint
+  paintClocks();
+  document.querySelectorAll('#langs button').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
+  updV();
+}
+document.querySelectorAll('#langs button').forEach(function(b){b.onclick=function(){setLang(b.dataset.lang);};});
+updV();
+</script>
+</body>
+</html>
