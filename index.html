@@ -84,6 +84,12 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,248,243,.92);backdro
 .btn-t{background:var(--turq);color:#fff;box-shadow:0 8px 20px rgba(63,184,176,.32)}
 .btn-t:hover{background:var(--turq-d);transform:translateY(-2px)}
 .btn-o{background:#fff;border-color:var(--purple);color:var(--purple)}
+.cta2{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:640px;margin:0 auto}
+.cta2 .btn{justify-content:center;width:100%;padding:16px 20px}
+.cta2-note{color:#7c7385;font-size:.95rem;margin-bottom:16px}
+.btn-ig{background:linear-gradient(90deg,#f58529,#dd2a7b 50%,#8134af);color:#fff;box-shadow:0 8px 20px rgba(221,42,123,.3);background-origin:border-box}
+.btn-ig:hover{transform:translateY(-2px);filter:brightness(1.05)}
+@media(max-width:600px){.cta2{grid-template-columns:1fr}}
 .btn-o:hover{background:var(--purple);color:#fff}
 .hero-card{position:relative;aspect-ratio:4/5;border-radius:28px;background:
   linear-gradient(135deg,#fff,var(--turq-l));border:1px solid #eadff7;box-shadow:var(--shadow);
@@ -348,7 +354,11 @@ footer small{color:#a99fb5}
 </div>
 
 <div class="wrap center" style="margin-top:40px">
-  <a href="#contact" class="btn btn-t" data-i18n="wCta">Prijavi se za radionicu</a>
+  <p class="cta2-note">📅 <span data-i18n="wNote">Termine novih radionica prvo objavljujemo na Instagramu</span></p>
+  <div class="cta2">
+    <a href="#contact" class="btn btn-t">✏️ <span data-i18n="wCta">Prijavi se za radionicu</span></a>
+    <a href="https://www.instagram.com/atelje138" target="_blank" rel="noopener" class="btn btn-ig"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg> <span data-i18n="wIg">Pogledaj naredne radionice</span></a>
+  </div>
 </div>
 </section>
 
@@ -559,6 +569,7 @@ var T={
   a3t:"Team building",a3d:"Creative workshops for companies and teams — creating together that connects and relaxes the group.",
   a4t:"Hen parties & celebrations",a4d:"Private groups for hen nights, celebrations and special occasions — with a tailored creative program.",
   onReq:"Price on request",age418:"ages 4–18",age18:"ages 18+",groupChip:"Group",byAgree:"Groups by arrangement",priv:"Private, by arrangement",
+  wNote:"We announce new workshop dates on Instagram first",wIg:"See upcoming workshops",
   bd1:"up to 10 kids — 20,000 RSD",bd2:"11–20 kids — 36,000 RSD",bd3:"21–30 kids — 48,000 RSD",wCta:"Sign up for a workshop",
   vEye:"Gift voucher",vTitle:"Gift creativity",vText:"Surprise someone with a personalized gift voucher for a workshop of their choice worth 3,000 RSD. They pick the date. Fill in the form — we'll reply with confirmation and payment details.",
   vForWorkshop:"for a workshop of your choice",vpTo:"For: ______",vpMsg:"Your message...",
@@ -590,6 +601,7 @@ var T={
   a3t:"Тимбилдинг",a3d:"Творческие мастер-классы для компаний и команд — совместное творчество, которое объединяет и расслабляет коллектив.",
   a4t:"Девичник и праздники",a4d:"Частные группы для девичников, праздников и особых случаев — с индивидуальной творческой программой.",
   onReq:"Цена по запросу",age418:"4–18 лет",age18:"18+ лет",groupChip:"Группа",byAgree:"Группы по договорённости",priv:"Приватно, по договорённости",
+  wNote:"Даты новых мастер-классов мы сначала публикуем в Instagram",wIg:"Ближайшие мастер-классы",
   bd1:"до 10 детей — 20 000 RSD",bd2:"11–20 детей — 36 000 RSD",bd3:"21–30 детей — 48 000 RSD",wCta:"Записаться на мастер-класс",
   vEye:"Подарочный сертификат",vTitle:"Подари творчество",vText:"Удивите кого-то именным подарочным сертификатом на мастер-класс по выбору на сумму 3 000 RSD. Дату выбирают сами. Заполните форму — мы ответим с подтверждением и реквизитами.",
   vForWorkshop:"на мастер-класс по выбору",vpTo:"Кому: ______",vpMsg:"Ваше сообщение...",
